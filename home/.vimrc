@@ -657,44 +657,6 @@ if isdirectory($HOME . '/.vim/bundle/FuzzyFinder')
     nmap fc :FufMruCmd<CR>
 endif
 
-"NeoBundle
-if isdirectory(expand('~/.vim/bundle/'))
-    if has('vim_starting')
-        set runtimepath+=~/.vim/bundle/neobundle.vim/
-
-        call neobundle#rc(expand('~/.vim/bundle/'))
-
-        NeoBundleFetch 'Shougo/neobundle.vim'
-        "NeoBundle 'Shougo/vimproc'
-
-        " My Bundles here:
-        "NeoBundle 'tpope/vim-fugitive'
-        "Visual block mode時に$で問題有り
-    "NeoBundle 'alpaca-tc/alpaca_powertabline'
-    "NeoBundle 'Lokaltog/powerline' , { 'rtp' : 'powerline/bindings/vim'}
-        NeoBundle 'L9'
-    NeoBundle 'vim-scripts/FuzzyFinder.git'
-    "NeoBundle 'gregsexton/gitv'
-        "NeoBundle 'rails.vim'
-        NeoBundle 'vim-jp/vimdoc-ja.git'
-        NeoBundle 'tsaleh/vim-align'
-        "NeoBundle 'h1mesuke/vim-alignta'
-        "NeoBundle 'tyru/skk.vim'
-        "NeoBundle 'tyru/eskk.vim'
-        NeoBundle 'DrawIt'
-        NeoBundle 'guicolorscheme.vim'
-        NeoBundle 'flazz/vim-colorschemes'
-        "NeoBundle 'othree/eregex.vim'
-        "NeoBundle 'Shougo/neocomplcache'
-        NeoBundle 'tpope/vim-surround'
-        NeoBundle 'tpope/vim-repeat'
-        NeoBundle 'koron/minimap-vim'
-
-        filetype plugin indent on
-        NeoBundleCheck
-    endif
-endif
-
 "http://blog.ruedap.com/2011/02/02/vim-ruby-regexp-plugin-eregex
 if isdirectory($HOME . '/.vim/bundle/eregex.vim')
     let g:eregex_default_enable = 0
@@ -889,6 +851,15 @@ call neobundle#begin(expand('~/.vim/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'L9'
+NeoBundle 'vim-scripts/FuzzyFinder.git'
+NeoBundle 'vim-jp/vimdoc-ja.git'
+NeoBundle 'tsaleh/vim-align'
+NeoBundle 'DrawIt'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'koron/minimap-vim'
+
 " コード補完
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'marcus/rsense'
@@ -918,6 +889,7 @@ NeoBundle 'Shougo/neomru.vim'
 " 色設定
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle 'ujihisa/unite-colorscheme'
 
 call neobundle#end()
 
