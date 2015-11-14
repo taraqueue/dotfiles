@@ -201,4 +201,6 @@ case ${OSTYPE} in
         ;;
 esac
 
+. /Users/itokentaro/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+
 # vim:set ft=zsh:

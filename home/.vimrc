@@ -822,7 +822,7 @@ nnoremap <Space>B :<C-u>Unite buffer -buffer-name=file<CR>
 
 
 "空行挿入
-nnoremap <CR> A<CR><ESC>
+nnoremap <CR> kA<CR><ESC>
 
 "Beep音消す
 set visualbell
@@ -962,8 +962,14 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 "色設定
 colorscheme railscasts
 
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
-"
+set laststatus=2 " Always display the statusline in all windows
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+
 
 "Tipsメモ
 "
