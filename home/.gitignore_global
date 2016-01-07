@@ -1,4 +1,5 @@
 *~
 .DS_Store
-*.swp
-*.swo
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.vim

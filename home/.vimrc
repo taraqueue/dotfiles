@@ -1,4 +1,6 @@
 "-------基本設定--------
+set shell=/bin/sh
+
 "タイトルをバッファ名に変更しない
 set notitle
 set shortmess+=I
@@ -401,11 +403,11 @@ set wildmode=longest,list,full
 set clipboard+=unnamed
 
 "ターミナルでマウスを使用できるようにする
-if has ("mouse")
-    set mouse=a
-    set guioptions+=a
-    set ttymouse=xterm2
-endif
+"if has ("mouse")
+"    set mouse=a
+"    set guioptions+=a
+"    set ttymouse=xterm2
+"endif
 
 if has('gui')
     "ツールバーを消す
@@ -827,9 +829,10 @@ nnoremap <CR> kA<CR><ESC>
 "Beep音消す
 set visualbell
 set vb t_vb=
-if has('mouse')
-  set mouse=a
-endif
+
+"if has('mouse')
+"  set mouse=a
+"endif
 
 " -------------------------------
 " NeoBundle
@@ -920,8 +923,9 @@ let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 " --------------------------------
 " syntastic_mode_mapをactiveにするとバッファ保存時にsyntasticが走る
 " active_filetypesに、保存時にsyntasticを走らせるファイルタイプを指定する
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'python'] }
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_python_checkers = ['flake8']
 
 " --------------------------------
 " submode
