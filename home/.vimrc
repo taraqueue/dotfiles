@@ -894,6 +894,9 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'ujihisa/unite-colorscheme'
 
+" coffeescript syntax
+NeoBundle 'kchmck/vim-coffee-script'
+
 call neobundle#end()
 
 filetype plugin indent on
