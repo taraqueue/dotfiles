@@ -824,7 +824,7 @@ nnoremap <Space>B :<C-u>Unite buffer -buffer-name=file<CR>
 
 
 "空行挿入
-nnoremap <CR> kA<CR><ESC>
+nnoremap <Space><CR> kA<CR><ESC>
 
 "Beep音消す
 set visualbell
@@ -897,6 +897,13 @@ NeoBundle 'ujihisa/unite-colorscheme'
 " coffeescript syntax
 NeoBundle 'kchmck/vim-coffee-script'
 
+" typescript syntax
+NeoBundle 'leafgarland/typescript-vim'
+let g:typescript_indent_disable = 1
+
+" コメントアウト
+NeoBundle 'tomtom/tcomment_vim'
+
 call neobundle#end()
 
 filetype plugin indent on
@@ -919,7 +926,7 @@ let g:neocomplete#enable_smart_case = 1
 if !exists('g:neocomplete#force_omni_input_patterns')
   let g:neocomplete#force_omni_input_patterns = {}
 endif
-let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
+"let g:neocomplete#force_omni_input_patterns.ruby = '[^.*\t]\.\w*\|\h\w*::'
 
 " --------------------------------
 " rubocop
